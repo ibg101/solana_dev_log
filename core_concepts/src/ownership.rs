@@ -23,3 +23,6 @@ fn consumer(s: String) {
 fn copy_consumer(n: u32) {
     println!("Copied: {}", n);
 } // No drop needed (stack data)
+
+
+use std::collections::BTreeSet;
