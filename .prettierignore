@@ -1,7 +1,7 @@
-challenges/solana_specific/anchor
-challenges/solana_specific/DS_Store
-challenges/solana_specific/target
-challenges/solana_specific/node_modules
-challenges/solana_specific/dist
-challenges/solana_specific/build
-challenges/solana_specific/test-ledger
+**/anchor
+**/DS_Store
+**/target
+**/node_modules
+**/dist
+**/build
+**/test-ledger

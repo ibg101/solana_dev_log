@@ -1,7 +1,7 @@
-challenges/solana_specific/anchor
-challenges/solana_specific/DS_Store
-challenges/solana_specific/target
-challenges/solana_specific/**/*.rs.bk
-challenges/solana_specific/node_modules
-challenges/solana_specific/test-ledger
-challenges/solana_specific/yarn
+**/anchor
+**/DS_Store
+**/target
+**/*.rs.bk
+**/node_modules
+**/test-ledger
+**/yarn
