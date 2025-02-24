@@ -18,7 +18,7 @@ pub fn example() {
 
 fn consumer(s: String) {
     println!("Consumed: {}", s);
-} // `d` dropped here
+} // `s` dropped here
 
 fn copy_consumer(n: u32) {
     println!("Copied: {}", n);
