@@ -1,0 +1,201 @@
+Streaming transaction logs mentioning wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5. Confirmed commitment
+Transaction executed in slot 39:
+  Signature: 5shZgSMFbVBwLpXjQpmSGybXK7y1AjgmLA2YT4QrgJpK4KwNxbmsP5kw8GrkHijejC1N6v5cW38MMjwZ5TkDateq
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 4BYCVXebkuE8V1AG2nARKYGqnRKRoixwaAGAX8sLzm4gdMhj68UUjccUvkWnFhcu6QaFnEcLu3oEkanAkPAFSp9v
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 8445 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 1mzbFNBmcnF4YrFiU2ta1ktwj7gZ6jrqe9tUT2j2b9nsxnnD76fz4ZKo5xugWDasAuovmgvUupGzJkYAVSqr4bf
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 14445 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 4b79fZeLzsx3iBp6aL2HcqedQUmD8G47PiC9YrJZubQmG7Jiv6z1sT4MzLVhnwNg7hobv7vKj4njgyugbkfEW5CX
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 2ksd5Rpv3eaWwyCBEsd3GAp9cTNu5AfrQwfFVEMwYTv1YSHQ1nxytuWnqaRpPV3gEcythChd9kT5gYpzkfY6uD3T
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: poGC7hcHSXZZog6YyXnZkkyEVpiiBWvrv4eZrCZc7BHrfEY76ke8kwvwUcTgA3Yik6qGmgLqbTLddzdTq9Dj3LW
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 9945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 4cKVEmpSixxmDbAK84BEgatb5rDrksymUBKL1f9vPFJw7jrcoF44tXgcB2K4XxtmaMMtrnxfmZJBkcE41iW2YfQp
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 8445 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 3qbCQs8U9AVjSJ6vfiLy9Gg8U4mhgqZwoqTMtzRmwMtPsAkWDKUsUrLmKSbq5sX8ATjb8C6fkRUQysw9XerXjRsB
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 8445 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 2f7ZmgvhTni7B9o5acrwinqjAvYdMqjhn3GZvDFPUpss5g4CeoFBG57bSBbdD42cPp38WvCTTJi5TWEn2e3e3qp3
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 3F6jZc2owcVMNQYjq4VSuXwCbZRhBuHBdyMB9UamopWi5raoFeBpuhuqQ8bCoNmcUugjwMdXVPfdPZJqh4Qe1ZAM
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 8445 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 5NdTLL2tzbkSGhxdvyuVdRqVtAbkBrkXuxDtyi4u3f8w9ykJQkaz9iP2Sryce1zxZYB5E7JAVDNaoM5SPQcKQhgv
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: c4tXvh1nTRJ3BoemiiwKzdA1WMaxt3AT8T4Fvb6yohu1PVEkAu44TW1i4r5frpfvRu9TWfVi8gCzLdXwQ9QFsCW
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 5pKzk8FehC8o4mbj4ydhAHNPYoFbusM9GbXYjrtUbZLiVhFZ7eLRpMWkLS3Potr3WQ2DUHjxdSwhVRyDbNmE9oHg
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: PWRMsmrJR7AYSzKDct4GR4gJguLxqq3F8j6mcXnZnK2TRceC6UjpdC7iiCsvm2NZ9iBZNh8nqgaD7em4cZcL46Q
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 8445 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: pEUujsLbsXzfH1YUUi7n4JKMfARQSwHcaWDPWjL3MKgbjbZeJcLkemoYW2KqVMbCwpMEHJWY4NtomQEdvHdQSns
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 1ngt6GFyYiEbiPKqUAv8why7USyW9xUWUb4PpgjmnAHfvZY6ekQTf34h5mTixtpek8R9j3ZBm6QzKZ6Kd1tXX9T
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 4ZfDoY4Lzv1wnM4seky9EnoaYzvEyTtkyR7zF2gBuL5H9pGEaAbr3nhTRZevuH487KS4AqZ95uamiu9DZFKgwze2
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 6945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 2fCo7N1HXwupDRy6VnGVAA6F6HuLW21ovTVVbesNvRmDwXsiUSQxpssSXrss44vRScc6VXbAEz8DY8hnUHrwesD1
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 9945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 24bAXhHTa2XumSgUdBE7XJ1DCA3SRHziBnhDUKjP8DZSZX1wqzuQUx6E2RM2DpNTQS66XBQHeV1rak6fGo4q1Z8F
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 14445 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
+Transaction executed in slot 39:
+  Signature: 3fuCHReRN2aiYBgySX4oGbezge95y3JaYYAXvmHoJkQxKZLK7YGg9JPQmn7ZTVPTFJNtdez6tPcu2CVJyAiN13Gc
+  Status: Ok
+  Log Messages:
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 invoke [1]
+    Program log: Instruction: InitPda
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 consumed 12945 of 200000 compute units
+    Program wLdqJZg7heBecsP3vT57smP3yfVEa8mfyttaEagCeg5 success
