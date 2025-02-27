@@ -5,7 +5,7 @@ A repository for learning Rust and Solana through:
 - **Real-world project examples**  
 
 ## Structure  
-1. [Core Concepts](/core_concepts) - Foundational Rust for Solana  
+1. [Core Concepts](/core_concepts) - Foundational Rust for Solana & Anchor Basics  
 2. [Challenges](/challenges) - LeetCode-style & Solana-specific tasks  
 3. [Examples](/examples) - Complete projects with explanations    
 
