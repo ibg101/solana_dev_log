@@ -18,9 +18,9 @@ describe("sealevel runtime test", () => {
         }
     };
 
-	// !!! IMPORTANT !!! Although all transactions are signed simultaneously, they are executed sequentially. 
-	// This is due to the fact that the mainPayer account's state is being mutated (its SOL balance is reduced in each transaction), 
-	// which may cause issues if all transactions are sent concurrently.
+    // !!! IMPORTANT !!! Although all transactions are signed simultaneously, they are executed sequentially. 
+    // This is due to the fact that the mainPayer account's state is being mutated (its SOL balance is reduced in each transaction), 
+    // which may cause issues if all transactions are sent concurrently.
     const airdropUsers = async (users: Keypair[]) => {
         const { blockhash } = await provider.connection.getLatestBlockhash();
         const txs = users.map(user => {
@@ -46,7 +46,13 @@ describe("sealevel runtime test", () => {
             const { blockhash } = await provider.connection.getLatestBlockhash();
 
             const txs = await Promise.all(batch.map(async (user) => {
-                const [PDA] = PublicKey.findProgramAddressSync([Buffer.from("meta"), user.publicKey.toBuffer()], program.programId);
+                const [PDA, _bump] = PublicKey.findProgramAddressSync(
+                    [
+                        Buffer.from("meta"), 
+                        user.publicKey.toBuffer()
+                    ], 
+                    program.programId
+                );
                 const tx = new Transaction().add(
                     await program.methods[method]()
                         .accounts({ meta: PDA, signer: user.publicKey, systemProgram: anchor.web3.SystemProgram.programId })
@@ -60,27 +66,27 @@ describe("sealevel runtime test", () => {
             }));
 
             let resultSigs = await Promise.allSettled(
-				txs.map(tx => provider.connection.sendRawTransaction(tx.serialize(), { skipPreflight: false }))
-			);
+                txs.map(tx => provider.connection.sendRawTransaction(tx.serialize(), { skipPreflight: false }))
+            );
 
-			resultSigs.forEach((sig) => {
-				if (sig.status == "fulfilled") {
-					console.log(`✅ ${method} tx success: ${sig.value}`);
-				} else {
-					console.error(`❌ ${method} tx failed:`, sig.reason);
-				}
-			});
+            resultSigs.forEach((sig) => {
+                if (sig.status == "fulfilled") {
+                    console.log(`✅ ${method} tx success: ${sig.value}`);
+                } else {
+                    console.error(`❌ ${method} tx failed:`, sig.reason);
+                }
+            });
         }
         console.timeEnd(`${method} processing`);
     };
 
     it("executes multiple transactions in parallel", async () => {
-		const users = Array.from({ length: 20 }, () => Keypair.generate());
-		
-		await airdropUsers(users);
-		await processUsersInBatches(users, "initPda");
-		// for simplicity sake using timeout instead of confirming txs by commitment 
-		await sleep(10000);
+        const users = Array.from({ length: 20 }, () => Keypair.generate());
+        
+        await airdropUsers(users);
+        await processUsersInBatches(users, "initPda");
+        // for simplicity sake using timeout instead of confirming txs by commitment 
+        await sleep(10000);
         await processUsersInBatches(users, "updatePda");
     });
 });
