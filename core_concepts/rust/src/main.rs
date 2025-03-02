@@ -1,7 +1,7 @@
 use simple_logger::SimpleLogger;
 
-mod ownership;
-mod concurrency;
+mod std_lib;
+mod tokio_lib;
 
 // by default, it's set to the "multi_thread" runtime && default worker threads == available CPU cores,
 // but can be modified and explicitly set to #[tokio::main(flavor = "single_thread")]
@@ -10,5 +10,6 @@ mod concurrency;
 async fn main() {
     SimpleLogger::new().init().unwrap();
 
-    let _ = concurrency::basics().await;
+    // let _ = tokio_lib::concurrency::basics().await;
+    tokio_lib::channels::basics().await;
 }
