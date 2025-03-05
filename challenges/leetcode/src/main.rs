@@ -8,7 +8,7 @@ fn main() {
     };
     
     use easy::two_sum;
-    use medium::validate_bst;
+    use medium::{validate_bst, group_anagrams};
     
 
     // TWO_SUM:
@@ -27,4 +27,20 @@ fn main() {
         right: Some(Rc::new(RefCell::new(validate_bst::TreeNode::new(validate_bst_values[2]))))
     };
     assert!(validate_bst::Solution::is_valid_bst(Some(Rc::new(RefCell::new(root)))));
+
+
+    // GROUP ANAGRAMS:
+    let v: Vec<String> = vec!["eat","tea","tan","ate","nat","bat"]
+        .into_iter()
+        .map(|i| i.into())
+        .collect();
+    println!("raw: {:?}\ngrouped: {:?}", v, group_anagrams::Solution::group_anagrams(v.clone()));  // for simplicity just .clone(), ik it can be optimized
+}
+
+
+#[test]
+fn testing() {
+    let v = vec!["eat","tea","tan","ate","nat","bat"].into_iter().map(|i| i.into()).collect();
+    let r = medium::group_anagrams::Solution::group_anagrams(v);
+    println!("{:?}", r);
 }
