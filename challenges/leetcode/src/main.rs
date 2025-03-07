@@ -8,7 +8,11 @@ fn main() {
     };
     
     use easy::two_sum;
-    use medium::{validate_bst, group_anagrams};
+    use medium::{
+        validate_bst, 
+        group_anagrams,
+        merge_intervals
+    };
     
 
     // TWO_SUM:
@@ -35,12 +39,26 @@ fn main() {
         .map(|i| i.into())
         .collect();
     println!("raw: {:?}\ngrouped: {:?}", v, group_anagrams::Solution::group_anagrams(v.clone()));  // for simplicity just .clone(), ik it can be optimized
+
+
+    // MERGE INTERVALS:
+    let intervals_arr: Vec<[i32; 2]> = vec![[1,3], [2,6] ,[8,10] ,[8,9], [9,11],[15,18], [2,4] ,[16,17]];
+    let intervals: Vec<Vec<i32>> = intervals_arr
+        .iter()
+        .map(|arr| arr.to_vec())
+        .collect(); 
+    let r: Vec<Vec<i32>> = merge_intervals::Solution::merge(intervals);
+    println!("raw: {:?}\nmerged: {:?}", intervals_arr, r);
 }
 
 
 #[test]
 fn testing() {
-    let v = vec!["eat","tea","tan","ate","nat","bat"].into_iter().map(|i| i.into()).collect();
-    let r = medium::group_anagrams::Solution::group_anagrams(v);
-    println!("{:?}", r);
+    let intervals_arr: Vec<[i32; 2]> = vec![[1,3], [2,6] ,[8,10] ,[8,9], [9,11],[15,18], [2,4] ,[16,17]];
+    let intervals: Vec<Vec<i32>> = intervals_arr
+        .iter()
+        .map(|arr| arr.to_vec())
+        .collect();
+    let r: Vec<Vec<i32>> = medium::merge_intervals::Solution::merge(intervals);
+    println!("raw: {:?}\nmerged: {:?}", intervals_arr, r);
 }
