@@ -11,7 +11,8 @@ fn main() {
     use medium::{
         validate_bst, 
         group_anagrams,
-        merge_intervals
+        merge_intervals,
+        prime_numbers
     };
     
 
@@ -42,23 +43,31 @@ fn main() {
 
 
     // MERGE INTERVALS:
-    let intervals_arr: Vec<[i32; 2]> = vec![[1,3], [2,6] ,[8,10] ,[8,9], [9,11],[15,18], [2,4] ,[16,17]];
+    let intervals_arr: Vec<[i32; 2]> = vec![[1,3], [2,6], [8,10], [8,9], [15,18], [9,11], [2,4] ,[16,17]];
     let intervals: Vec<Vec<i32>> = intervals_arr
         .iter()
         .map(|arr| arr.to_vec())
         .collect(); 
     let r: Vec<Vec<i32>> = merge_intervals::Solution::merge(intervals);
     println!("raw: {:?}\nmerged: {:?}", intervals_arr, r);
+
+
+    // CLOSEST PRIME NUMBERS IN RANGE
+    let (left, right): (i32, i32) = (19, 31);
+    println!("2 Closest prime numbers in {}..{} -> {:?}", left, right, prime_numbers::Solution::closest_in_range(left, right));
 }
 
 
 #[test]
 fn testing() {
-    let intervals_arr: Vec<[i32; 2]> = vec![[1,3], [2,6] ,[8,10] ,[8,9], [9,11],[15,18], [2,4] ,[16,17]];
-    let intervals: Vec<Vec<i32>> = intervals_arr
-        .iter()
-        .map(|arr| arr.to_vec())
-        .collect();
-    let r: Vec<Vec<i32>> = medium::merge_intervals::Solution::merge(intervals);
-    println!("raw: {:?}\nmerged: {:?}", intervals_arr, r);
+    // let intervals_arr: Vec<[i32; 2]> = vec![[1,3], [2,6], [8,10], [8,9], [15,18], [9,11], [2,4] ,[16,17]];
+    // let intervals: Vec<Vec<i32>> = intervals_arr
+    //     .iter()
+    //     .map(|arr| arr.to_vec())
+    //     .collect();
+    // let r: Vec<Vec<i32>> = medium::merge_intervals::Solution::merge(intervals);
+    // println!("raw: {:?}\nmerged: {:?}", intervals_arr, r);
+    
+    let r = medium::prime_numbers::Solution::closest_in_range(19, 31);
+    println!("{r:?}");
 }
