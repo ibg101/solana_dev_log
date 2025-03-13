@@ -91,7 +91,7 @@ where
 
     if let Err(e) = write.send(Message::text(request_json_rpc.to_string())).await {
         log::error!("Failed to make a subscription request! {}", e);
-        try_to_close_connection(&mut write).await;
+        try_to_close_connection(&mut write, CloseCode::Unsupported).await;
         return Err(e.into());
     }
 
@@ -110,12 +110,12 @@ where
             },
             Ok(Message::Close(_)) => {
                 log::error!("Received Close Frame! Closing stream.");
-                try_to_close_connection(&mut write).await;
+                try_to_close_connection(&mut write, CloseCode::Normal).await;
             },
             Ok(_) => {},
             Err(e) => {
                 log::error!("Error occurred: {}", e);
-                try_to_close_connection(&mut write).await;
+                try_to_close_connection(&mut write, CloseCode::Error).await;
             }
         }
     }
@@ -123,8 +123,8 @@ where
     Ok(())
 }
 
-async fn try_to_close_connection<T: SinkExt<Message> + Unpin>(write: &mut T) -> () {
-    let close_frame: CloseFrame = CloseFrame { code: CloseCode::Error, reason: Utf8Bytes::from_static("") };
+async fn try_to_close_connection<T: SinkExt<Message> + Unpin>(write: &mut T, close_code: CloseCode) -> () {
+    let close_frame: CloseFrame = CloseFrame { code: close_code, reason: Utf8Bytes::from_static("") };
     if let Err(_) = write.send(Message::Close(Some(close_frame))).await {
         log::error!("Failed to properly close connection!");
     }
