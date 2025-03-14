@@ -128,4 +128,7 @@ async fn try_to_close_connection<T: SinkExt<Message> + Unpin>(write: &mut T, clo
     if let Err(_) = write.send(Message::Close(Some(close_frame))).await {
         log::error!("Failed to properly close connection!");
     }
+    if let Err(_) = write.flush().await {
+        log::error!("Failed to flush WebSocket messages! Possible data loss.");
+    }
 }
