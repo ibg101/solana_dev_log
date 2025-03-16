@@ -90,32 +90,48 @@ where
     });
 
     if let Err(e) = write.send(Message::text(request_json_rpc.to_string())).await {
-        log::error!("Failed to make a subscription request! {}", e);
-        try_to_close_connection(&mut write, CloseCode::Unsupported).await;
+        if matches!(e, tungstenite::Error::ConnectionClosed | tungstenite::Error::AlreadyClosed) {
+            log::error!("Server closed connection after the handshake, but before sending a subscription request!");
+        } else {
+            log::trace!("An error occurred while sending subscription request!");
+            try_to_close_connection(&mut write, None).await;
+        }
         return Err(e.into());
     }
 
-    while let Some(msg) = read.next().await {
-        match msg {
-            Ok(Message::Text(text)) => {
-                log::info!("{:#?}", text);
-                // process text ... 
-            },
-            Ok(Message::Ping(v)) => {
-                if let Err(_) = write.send(Message::Pong(v)).await {
-                    log::error!("Failed to send Pong Frame!");
-                    continue;
+    loop {
+        tokio::select! {
+            Some(msg) = read.next() => {
+                match msg {
+                    Ok(Message::Text(text)) => {
+                        log::info!("{:#?}", text);
+                        // process text ... 
+                    },
+                    Ok(Message::Ping(v)) => {
+                        if let Err(_) = write.send(Message::Pong(v)).await {
+                            log::error!("Failed to send Pong Frame!");
+                            continue;
+                        }
+                        log::error!("Sent Pong Frame!");
+                    },
+                    Ok(Message::Close(frame)) => {
+                        log::error!("Received Close Frame! Closing stream.");
+                        try_to_close_connection(&mut write, frame).await;
+                    },
+                    Ok(_) => {},
+                    Err(e) => {
+                        match e {
+                            tungstenite::Error::ConnectionClosed => break log::info!("Connection is properly closed!"),
+                            _ => return Err(e.into())
+                        }
+                    }
                 }
-                log::error!("Sent Pong Frame!");
             },
-            Ok(Message::Close(_)) => {
-                log::error!("Received Close Frame! Closing stream.");
-                try_to_close_connection(&mut write, CloseCode::Normal).await;
-            },
-            Ok(_) => {},
-            Err(e) => {
-                log::error!("Error occurred: {}", e);
-                try_to_close_connection(&mut write, CloseCode::Error).await;
+
+            _ = tokio::time::sleep(tokio::time::Duration::from_millis(10000)) => {
+                if let Err(e) = write.send(Message::Ping(vec![].into())).await {
+                    log::error!("Failed to send a Heartbeat Ping! {e}");
+                }
             }
         }
     }
@@ -123,12 +139,8 @@ where
     Ok(())
 }
 
-async fn try_to_close_connection<T: SinkExt<Message> + Unpin>(write: &mut T, close_code: CloseCode) -> () {
-    let close_frame: CloseFrame = CloseFrame { code: close_code, reason: Utf8Bytes::from_static("") };
-    if let Err(_) = write.send(Message::Close(Some(close_frame))).await {
+async fn try_to_close_connection<T: SinkExt<Message> + Unpin>(write: &mut T, close_frame: Option<CloseFrame>) -> () {
+    if let Err(_) = write.send(Message::Close(close_frame)).await {
         log::error!("Failed to properly close connection!");
-    }
-    if let Err(_) = write.flush().await {
-        log::error!("Failed to flush WebSocket messages! Possible data loss.");
     }
 }
