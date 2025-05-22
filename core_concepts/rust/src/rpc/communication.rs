@@ -8,11 +8,9 @@ use tokio_tungstenite::{
     connect_async,
     tungstenite::{
         self,
-        Utf8Bytes, 
         protocol::{
             Message, 
             CloseFrame, 
-            frame::coding::CloseCode
         }
     },
 };

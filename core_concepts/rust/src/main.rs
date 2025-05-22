@@ -3,6 +3,7 @@ use simple_logger::SimpleLogger;
 mod std_lib;
 mod tokio_lib;
 mod rpc;
+mod concurrency_vs_parallelism;
 
 // by default, it's set to the "multi_thread" runtime && default worker threads == available CPU cores,
 // but can be modified and explicitly set to #[tokio::main(flavor = "single_thread")]
@@ -27,4 +28,14 @@ async fn main() {
         account_id, 
         rpc::communication::CommitmentLevel::Confirmed
     ).await.unwrap();
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]  // this example sets it's own runtime, no need in #[tokio::test]
+    fn concurrency_vs_parallelism() -> () {
+        concurrency_vs_parallelism::try_example().unwrap();
+    }
 }
